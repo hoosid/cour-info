@@ -18,6 +18,13 @@
     background-size: cover;
     background-position: center center;
   }
+  .image1 {
+    background-image: url(../../images/stateistige.avif);
+    height: 60vh;
+    opacity: 0.4;
+    background-size: cover;
+    background-position: center center;
+  }
   
   .contact-bg h1 {
     z-index: 999;

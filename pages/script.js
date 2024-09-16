@@ -14,7 +14,7 @@ hide_checkbox.addEventListener("click", () => {
   } else {
     body.classList.remove("dark");
     body.classList.add("light");
-    footerLogo.src = "../../images/sidaxe (2).png";
+    footerLogo.src = "../../images/sidaxe(2).png";
     topLogo.src = "../../images/sidaxe (2).png";
   }
 });

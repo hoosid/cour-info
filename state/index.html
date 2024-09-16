@@ -10,12 +10,13 @@
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-    <title>Contact</title>
-    <link rel="stylesheet" href="../../styles/universal.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="../../styles/navbar.css" />
-    <link rel="stylesheet" href="../../styles/footer.css" />
-    <link rel="stylesheet" href="../../styles/colors.css" />
+    <title>state</title>
+    <link rel="stylesheet" href="../styles/universal.css" />
+    <link rel="stylesheet" href="../pages/contact us/style.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/colors.css" />
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   </head>
   <body class="dark">
     <header>
@@ -28,10 +29,10 @@
         ">
         <div class="nav-bar">
           <li class="logo">
-            <a href="../../index.html">
+            <a href="../index.html">
               <img
                 id="topLogo"
-                src="../../images/logo.webp"
+                src="../images/logo.webp"
                 alt="CoderClas Main Logo" />
             </a>
           </li>
@@ -63,21 +64,18 @@
             <input type="checkbox" id="check" />
             <span class="menu font-sans">
               <li>
-                <a class="text-white text-center" href="../../index.html">Home</a>
+                <a class="text-white text-center" href="../index.html">Home</a>
               </li>
-              <li><a class="text-white text-center" href="#">Contact Us</a></li>
+              <li><a class="text-white text-center" href="../pages/contact us/contact.html">Contact Us</a></li>
               <li>
                 <a
                   class="text-white text-center"
-                  href="../about us/about.html"
+                  href="../pages/about us/about.html"
                   >About Us</a
                 >
               </li>
-              <li></li>
-                <a class="text-white text-center" href="../../state/index.html">Statistique</a>
-              </li>
               <li>
-                <a href="../../index.html" rel="noopener noreferrer">
+                <a href="../index.html" rel="noopener noreferrer">
                 <button class="btn-design text-bold">Home</button></a>
               </li>
               <label for="check" class="close-menu">
@@ -96,12 +94,13 @@
     <div>
       <div class="contact-section">
         <div class="contact-bg">
-          <div class="image"></div>
+          
+          <div class="image1"></div>
         </div>
         <div class="contact-title">
           <div>
-            <h1>Get in Touch</h1>
-            <p>It is recommended to send via social media.</p>
+            <h1>state</h1>
+            <p>html , css , js , c , c++ , c# , python , java , php </p>
           </div>
         </div>
       </div>
@@ -112,97 +111,113 @@
       style="background-color: var(--primary-bg)">
       <div class="contact-form">
         <div class="form-title">
-          <p class="send-title">Send us a message</p>
+          <p class="send-title">statistique <i>2024-2025</i></p>
           <div>
-            <svg
-              style="color: var(--blog)"
-              stroke="currentColor"
-              fill="none"
-              stroke-width="0"
-              viewBox="0 0 24 24"
-              height="1em"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-            </svg>
+            <img src="../images/stats.png" alt="1" width="50px">
+         
           </div>
         </div>
+        <style>
+            .chart-container {
+                position: relative;
+                width: 100%;
+                height: 400px; /* Ajustez la hauteur selon vos besoins */
+            }
+    
+            /* Styles pour les grandes tailles d'écran */
+            @media screen and (min-width: 1000px) {  
+                .chart-flex {
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap; /* Pour éviter le débordement si les graphiques sont trop larges */
+                }
+    
+                .chart-flex > div {
+                    flex: 1;
+                    margin: 10px; /* Espacement entre les graphiques */
+                }
+            }
+    
+            /* Styles pour les petites tailles d'écran */
+            @media screen and (max-width: 700px) {
+                .chart-flex {
+                    display: block;
+                }
+    
+                .chart-flex > div {
+                    margin: 10px 0; /* Espacement vertical pour les petits écrans */
+                }
+            }
+        </style>
+        <dev class="form">
+         
+            <div class="chart-container">
+                <canvas id="myChart"></canvas>
+            </div>
+            <br><br>
+            <div class="chart-container">
+                <canvas id="sidou"></canvas>
+            </div>
+            <br><br>
+            <div class="chart-flex">
+                <div>
+                    <canvas id="pieChart"></canvas>
+                </div>
+                <div>
+                    <canvas id="doughnutChart"></canvas>
+                </div>
+            </div>
+            
+  
+ 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script src="state.js">
 
-        <form class="form">
-          <div class="first-contact-section">
-            <div class="input-container">
-              <input type="text" id="name" />
-              <label for="name">Name</label>
-            </div>
-            <div class="input-container">
-              <input type="text" id="email" />
-              <label for="email">Email</label>
-            </div>
-            <div class="input-container">
-              <input type="number" id="phone" />
-              <label for="phone">Phone Number</label>
-            </div>
-            <div class="input-container">
-              <input type="text" id="subject" />
-              <label for="subject">Subject</label>
-            </div>
-          </div>
-
-          <div class="input-container">
-            <input type="text" id="message" />
-            <label for="message">Message</label>
-          </div>
-
-          <div class="submit-btn">
-            <a type="submit" href="#">
-              Submit
-              <svg
-                stroke="currentColor"
-                fill="none"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg">
-                <desc></desc>
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-                <path
-                  d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5"></path>
-              </svg>
-            </a>
-          </div>
-        </form>
+    
+   
+  </script>
+        </dev>
       </div>
 
       <div class="social-contact">
-        <p>Contact Information</p>
+        <p>Description</p>
 
-        <div class="mail-content">
-          <div class="mail-logo">
-            <svg
-              stroke="currentColor"
-              fill="currentColor"
-              stroke-width="0"
-              viewBox="0 0 512 512"
-              height="1em"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M437.332 80H74.668C51.199 80 32 99.198 32 122.667v266.666C32 412.802 51.199 432 74.668 432h362.664C460.801 432 480 412.802 480 389.333V122.667C480 99.198 460.801 80 437.332 80zM432 170.667L256 288 80 170.667V128l176 117.333L432 128v42.667z"></path>
-            </svg>
-          </div>
+       <div>
+        <h4>
+            Today, the world is primarily focused on understanding which programming languages are used the most,
+         as many people are learning the most popular languages. I will provide you with all the available information on the most commonly
+         used programming languages in recent years to make it easier for you to research these languages.
+        </h4>
+<hr>
+        <h4>
+            Today, the world is primarily focused on understanding which programming languages are used the most,
+         as many people are learning the most popular languages. I will provide you with all the available information on the most commonly
+         used programming languages in recent years to make it easier for you to research these languages.
+        </h4>
 
-          <a href="mailto:hoosid5@gmail.com ">hoosid5@gmail.com </a>
-        </div>
+        <hr>
+        <h4>
+            Today, the world is primarily focused on understanding which programming languages are used the most,
+         as many people are learning the most popular languages. I will provide you with all the available information on the most commonly
+         used programming languages in recent years to make it easier for you to research these languages.
+        </h4>
+        <hr>
+        <h4>
+            Today, the world is primarily focused on understanding which programming languages are used the most,
+         as many people are learning the most popular languages. I will provide you with all the available information on the most commonly
+         used programming languages in recent years to make it easier for you to research these languages.
+        </h4>
+        <hr>
+        <h4>
+            Today, the world is primarily focused on understanding which programming languages are used the most,
+         as many people are learning the most popular languages. I will provide you with all the available information on the most commonly
+         used programming languages in recent years to make it easier for you to research these languages.
+        </h4>
+        
+       </div>
 
-        <div class="icons">
+        <!-- <div class="icons">
           <a target="_blank" href="https://www.youtube.com/@sidaxeinfo6378">
             <svg
               stroke="currentColor"
@@ -250,7 +265,7 @@
                 fill="#ffffff"></path>
             </svg>
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -260,7 +275,7 @@
           <div class="footer-container">
             <div class="first">
               <div class="top">
-                <img id="footerLogo" src="../../images/logo.webp" alt="" />
+                <img id="footerLogo" src="../images/logo.webp" alt="" />
               </div>
               <div class="bottom">
                 <p class="text-white">
@@ -364,3 +379,16 @@
     <script src="../script.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
